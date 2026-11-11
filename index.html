@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --card-bg: rgba(17, 20, 26, 0.90);
+            --card-bg: rgba(13, 15, 20, 0.92);
             --accent-gold: #d4af37;
             --gold-glow: rgba(212, 175, 55, 0.25);
             --text-main: #f9fafb;
@@ -20,7 +20,7 @@
             --ig-gradient: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
             --fb-blue: #1877f2;
             --fb-bright: #2d88ff;
-            --border-color: rgba(212, 175, 55, 0.25);
+            --border-color: rgba(212, 175, 55, 0.3);
         }
 
         * {
@@ -31,12 +31,13 @@
         }
 
         body {
-            /* Sfondo bilanciato: immagine proporzionata e centrata, non più "zoomata" */
+            /* Sfondo di classe, fisso, centrato e MAI ripetuto, con patina scura elegante */
             background-color: #07080a;
-            background-image: linear-gradient(rgba(7, 8, 10, 0.75), rgba(7, 8, 10, 0.88)), url('sfondo.webp');
-            background-size: 850px auto; /* Imposta una misura fissa e controllata dell'immagine */
-            background-position: center top;
-            background-repeat: repeat;
+            background-image: linear-gradient(rgba(7, 8, 10, 0.85), rgba(7, 8, 10, 0.94)), url('sfondo.webp');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: var(--text-main);
             display: flex;
             justify-content: center;
@@ -45,7 +46,7 @@
         }
 
         .container {
-            max-width: 620px;
+            max-width: 600px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -93,11 +94,11 @@
 
         .card {
             background: var(--card-bg);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
         }
 
         h2 {
