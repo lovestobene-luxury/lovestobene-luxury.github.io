@@ -18,6 +18,9 @@
             --text-muted: #9ca3af;
             --vinted-teal: #007785;
             --vinted-bright: #00a3b5;
+            --ig-gradient: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            --fb-blue: #1877f2;
+            --fb-bright: #2d88ff;
             --border-color: #1f242e;
         }
 
@@ -43,12 +46,12 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 22px;
+            gap: 20px;
         }
 
         header {
             text-align: center;
-            padding: 20px 10px 10px;
+            padding: 15px 10px 5px;
         }
 
         .badge-top {
@@ -61,7 +64,7 @@
             text-transform: uppercase;
             padding: 6px 16px;
             border-radius: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             font-weight: 600;
         }
 
@@ -88,42 +91,144 @@
             background: linear-gradient(145deg, #131720, #0d1016);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 26px;
+            padding: 24px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-            text-align: center;
         }
 
-        .card p {
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 0.88rem;
+            color: var(--text-main);
+            margin: 18px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: left;
+        }
+
+        p {
             color: var(--text-muted);
             line-height: 1.65;
-            font-size: 0.95rem;
-            margin-bottom: 8px;
+            font-size: 0.92rem;
         }
 
-        /* Pulsanti CTA ad Alto Impatto */
+        .urgency-box {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 3px solid var(--accent-gold);
+            padding: 12px 14px;
+            border-radius: 0 8px 8px 0;
+            margin: 14px 0;
+            font-size: 0.86rem;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .urgency-box strong {
+            color: var(--accent-gold);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 14px;
+        }
+
+        .feature-list li {
+            padding: 10px 0;
+            color: var(--text-main);
+            font-size: 0.86rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Pulsante Principale Vinted (Super d'impatto) */
         .cta-button {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             background: linear-gradient(135deg, var(--vinted-teal), var(--vinted-bright));
             color: #ffffff;
             text-decoration: none;
             text-align: center;
-            padding: 18px 24px;
-            border-radius: 12px;
+            padding: 20px 24px;
+            border-radius: 14px;
             font-weight: 700;
-            font-size: 0.98rem;
+            font-size: 1rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 6px 20px rgba(0, 119, 133, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 119, 133, 0.5);
         }
 
         .cta-button:hover {
-            transform: translateY(-3px) scale(1.01);
-            box-shadow: 0 10px 30px rgba(0, 163, 181, 0.6);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(0, 163, 181, 0.7);
             background: linear-gradient(135deg, #008a9b, #00b9ce);
+        }
+
+        /* Pulsante Instagram */
+        .ig-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: var(--ig-gradient);
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 15px 24px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 6px 20px rgba(131, 58, 180, 0.4);
+        }
+
+        .ig-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(253, 29, 29, 0.6);
+        }
+
+        /* Pulsante Facebook */
+        .fb-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--fb-blue), var(--fb-bright));
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 15px 24px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+        }
+
+        .fb-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(45, 136, 255, 0.6);
         }
 
         /* Tabella Fit Advisor */
@@ -150,15 +255,6 @@
 
         td {
             color: var(--text-muted);
-        }
-
-        h3 {
-            font-size: 0.88rem;
-            color: var(--text-main);
-            margin: 18px 0 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-align: left;
         }
 
         .measure-instructions {
@@ -241,23 +337,45 @@
 
 <div class="container">
     <header>
-        <div class="badge-top">✦ Official Vinted Showcase ✦</div>
-        <h1 class="brand-title">Lo Vesto Bene</h1>
+        <div class="badge-top">✦ Official Showcase ✦</div>
+        <h1 class="brand-title">LO VESTO BENE</h1>
         <div class="brand-subtitle">Vetrina Abbigliamento Uomo</div>
     </header>
 
-    <!-- 1. Pulsante Principale Vinted -->
+    <!-- 1. Pulsante Principale Vinted (Focalizzato sui pezzi unici) -->
     <a href="https://www.vinted.it/member/3198152889" target="_blank" class="cta-button">
-        <span>🔒 ESPLORA LA VETRINA SU VINTED</span>
+        <span>🛍️ ACQUISTA ORA SU VINTED</span>
         <span>➔</span>
     </a>
 
-    <!-- 2. Box di benvenuto generale -->
+    <!-- 2. Pulsanti Social (Instagram & Facebook) -->
+    <a href="https://www.instagram.com/lovestobene" target="_blank" class="ig-button">
+        <span>📸 SEGUI @LOVESTOBENE SU INSTAGRAM</span>
+        <span>➔</span>
+    </a>
+
+    <a href="https://www.facebook.com/LOVESTOBENE" target="_blank" class="fb-button">
+        <span>📘 SEGUI LA PAGINA FACEBOOK</span>
+        <span>➔</span>
+    </a>
+
+    <!-- 3. Presentazione Capi & Urgenza -->
     <div class="card">
-        <p>Benvenuto nella vetrina ufficiale. Scopri tutti i capi disponibili, le novità e le offerte direttamente sul profilo Vinted.</p>
+        <h2>Selezione Esclusiva</h2>
+        <p>Capi di abbigliamento uomo di alta gamma, rigorosamente nuovi e mai indossati con cartellino originale.</p>
+        
+        <div class="urgency-box">
+            ⚡ <strong>Disponibilità Limitata:</strong> Trattandosi di pezzi unici, gli articoli migliori vengono venduti rapidamente. Controlla subito la vetrina attiva.
+        </div>
+
+        <ul class="feature-list">
+            <li>✨ <strong>100% Originali & Nuovi</strong> con cartellino</li>
+            <li>📦 <strong>Spedizione rapida</strong> e imballo protettivo dedicato</li>
+            <li>🛡️ <strong>Garanzia Venditore Pro:</strong> massima tutela negli acquisti e diritto di recesso garantito su Vinted</li>
+        </ul>
     </div>
 
-    <!-- 3. Fit Advisor con Pulsante Interattivo -->
+    <!-- 4. Fit Advisor con Pulsante Interattivo -->
     <div class="card" style="padding: 20px;">
         <button class="accordion-btn" onclick="toggleFitAdvisor()">
             <span>📐 Fit Advisor — Guida alle Misure</span>
@@ -341,12 +459,6 @@
             </div>
         </div>
     </div>
-
-    <!-- 4. Pulsante Secondario Vinted -->
-    <a href="https://www.vinted.it/member/3198152889" target="_blank" class="cta-button">
-        <span>VEDI TUTTI I CAPI DISPONIBILI</span>
-        <span>➔</span>
-    </a>
 
     <footer>
         © Lo Vesto Bene Luxury — All rights reserved.
