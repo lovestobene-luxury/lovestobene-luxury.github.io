@@ -10,8 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Sfondi delle card leggermente più scuri e solidi per isolare i testi e renderli leggibilissimi */
-            --card-bg: rgba(11, 13, 18, 0.94);
+            --card-bg: rgba(11, 13, 18, 0.92);
             --accent-gold: #d4af37;
             --gold-glow: rgba(212, 175, 55, 0.3);
             --text-main: #f9fafb;
@@ -32,13 +31,13 @@
         }
 
         body {
-            /* Sfondo luminoso, pulito, con patina molto leggera per far risplendere l'immagine */
+            /* Immagine luminosa, intera e non tagliata (contain) */
             background-color: #0b0d12;
-            background-image: linear-gradient(rgba(11, 13, 18, 0.35), rgba(11, 13, 18, 0.65)), url('sfondo.webp');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-image: linear-gradient(rgba(11, 13, 18, 0.3), rgba(11, 13, 18, 0.6)), url('sfondo.webp');
+            background-size: contain;
+            background-position: center top;
+            background-repeat: repeat-y;
+            background-attachment: scroll;
             color: var(--text-main);
             display: flex;
             justify-content: center;
