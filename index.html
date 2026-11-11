@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lo Vesto Bene Luxury | Tailored Denim & Apparel</title>
+    <title>Lo Vesto Bene Luxury | Vetrina Ufficiale</title>
     <!-- Font di lusso da Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -90,31 +90,14 @@
             border-radius: 16px;
             padding: 26px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            text-align: center;
         }
 
-        h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.05rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 14px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            font-size: 0.88rem;
-            color: var(--text-main);
-            margin: 18px 0 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        p {
+        .card p {
             color: var(--text-muted);
             line-height: 1.65;
-            font-size: 0.92rem;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
         }
 
         /* Pulsanti CTA ad Alto Impatto */
@@ -135,8 +118,6 @@
             text-transform: uppercase;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 6px 20px rgba(0, 119, 133, 0.4);
-            position: relative;
-            overflow: hidden;
         }
 
         .cta-button:hover {
@@ -145,84 +126,17 @@
             background: linear-gradient(135deg, #008a9b, #00b9ce);
         }
 
-        /* Showcase Grid Impattante con focus su Qualità e Taglio Sartoriale */
-        .showcase-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            margin-top: 16px;
-        }
-
-        .showcase-item {
-            background: linear-gradient(145deg, #1a202c, #141822);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 20px 14px;
-            text-align: center;
-            transition: border-color 0.3s, transform 0.3s;
-        }
-
-        .showcase-item:hover {
-            border-color: var(--accent-gold);
-            transform: translateY(-2px);
-        }
-
-        .showcase-item h4 {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-
-        .showcase-item span {
-            font-size: 0.75rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
-        }
-
-        .quality-highlight {
-            margin-top: 16px;
-            background: rgba(212, 175, 55, 0.05);
-            border-left: 3px solid var(--accent-gold);
-            padding: 12px 15px;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.88rem;
-            color: var(--text-main);
-            line-height: 1.5;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-top: 18px;
-        }
-
-        .feature-list li {
-            padding: 10px 0;
-            color: var(--text-main);
-            font-size: 0.88rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 1px dashed var(--border-color);
-        }
-
-        .feature-list li:last-child {
-            border-bottom: none;
-        }
-
         /* Tabella Fit Advisor */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
             margin-bottom: 14px;
+            text-align: left;
         }
 
         th, td {
             padding: 10px 12px;
-            text-align: left;
             border-bottom: 1px solid var(--border-color);
             font-size: 0.82rem;
         }
@@ -238,15 +152,26 @@
             color: var(--text-muted);
         }
 
+        h3 {
+            font-size: 0.88rem;
+            color: var(--text-main);
+            margin: 18px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-align: left;
+        }
+
         .measure-instructions {
             margin-top: 18px;
             padding-top: 14px;
             border-top: 1px solid var(--border-color);
+            text-align: left;
         }
 
         .measure-instructions p {
             font-size: 0.86rem;
             margin-bottom: 10px;
+            text-align: left;
         }
 
         .measure-list {
@@ -254,6 +179,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            text-align: left;
         }
 
         .measure-list li {
@@ -315,9 +241,9 @@
 
 <div class="container">
     <header>
-        <div class="badge-top">✦ Private Luxury Selection ✦</div>
+        <div class="badge-top">✦ Official Vinted Showcase ✦</div>
         <h1 class="brand-title">Lo Vesto Bene</h1>
-        <div class="brand-subtitle">Luxury Denim & Sartorial Apparel</div>
+        <div class="brand-subtitle">Vetrina Abbigliamento Uomo</div>
     </header>
 
     <!-- 1. Pulsante Principale Vinted -->
@@ -326,35 +252,13 @@
         <span>➔</span>
     </a>
 
-    <!-- 2. Presentazione Capi & Categorie Selezionate -->
+    <!-- 2. Box di benvenuto generale -->
     <div class="card">
-        <h2>Selezione Esclusiva</h2>
-        <p>Prodotti rigorosamente selezionati con cura per garantire qualità d'eccellenza. Capi nuovi, mai indossati, completi di cartellino originale.</p>
-        
-        <div class="showcase-grid">
-            <div class="showcase-item">
-                <h4>Denham Denim</h4>
-                <span>Tessuto Candiani</span>
-            </div>
-            <div class="showcase-item">
-                <h4>Camicie & Polo</h4>
-                <span>Taglio Sartoriale</span>
-            </div>
-        </div>
-
-        <div class="quality-highlight">
-            ✨ <strong>Garanzia di Qualità:</strong> Ogni articolo è scelto per offrire vestibilità superiore, durata nel tempo e un inconfondibile <strong>taglio sartoriale</strong>.
-        </div>
-
-        <ul class="feature-list">
-            <li>💎 100% Originali & Nuovi con cartellino</li>
-            <li>🇮🇹 Pregiato denim italiano Candiani</li>
-            <li>📦 Spedizione rapida e imballo protettivo</li>
-        </ul>
+        <p>Benvenuto nella vetrina ufficiale. Scopri tutti i capi disponibili, le novità e le offerte direttamente sul profilo Vinted.</p>
     </div>
 
     <!-- 3. Fit Advisor con Pulsante Interattivo -->
-    <div class="card">
+    <div class="card" style="padding: 20px;">
         <button class="accordion-btn" onclick="toggleFitAdvisor()">
             <span>📐 Fit Advisor — Guida alle Misure</span>
             <span id="arrow-icon">▼</span>
