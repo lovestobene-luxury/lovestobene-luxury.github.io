@@ -10,18 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #07080a;
-            --card-bg: #11141a;
+            --card-bg: rgba(17, 20, 26, 0.88);
             --accent-gold: #d4af37;
             --gold-glow: rgba(212, 175, 55, 0.25);
             --text-main: #f9fafb;
-            --text-muted: #9ca3af;
+            --text-muted: #d1d5db;
             --vinted-teal: #007785;
             --vinted-bright: #00a3b5;
             --ig-gradient: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
             --fb-blue: #1877f2;
             --fb-bright: #2d88ff;
-            --border-color: #1f242e;
+            --border-color: rgba(212, 175, 55, 0.25);
         }
 
         * {
@@ -32,8 +31,12 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            background-image: radial-gradient(circle at top center, #171c26 0%, #07080a 70%);
+            /* Sfondo pulito 'sfondo.webp' con patina scura per la leggibilità */
+            background: linear-gradient(rgba(7, 8, 10, 0.82), rgba(7, 8, 10, 0.92)), url('sfondo.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: var(--text-main);
             display: flex;
             justify-content: center;
@@ -56,7 +59,7 @@
 
         .badge-top {
             display: inline-block;
-            background: linear-gradient(90deg, rgba(212,175,55,0.1), rgba(212,175,55,0.2), rgba(212,175,55,0.1));
+            background: linear-gradient(90deg, rgba(212,175,55,0.15), rgba(212,175,55,0.3), rgba(212,175,55,0.15));
             border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
             font-size: 0.72rem;
@@ -66,6 +69,7 @@
             border-radius: 20px;
             margin-bottom: 12px;
             font-weight: 600;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
         }
 
         .brand-title {
@@ -75,7 +79,7 @@
             text-transform: uppercase;
             font-weight: 700;
             color: #ffffff;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
         }
 
         .brand-subtitle {
@@ -88,11 +92,12 @@
         }
 
         .card {
-            background: linear-gradient(145deg, #131720, #0d1016);
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
         }
 
         h2 {
@@ -122,7 +127,7 @@
         }
 
         .urgency-box {
-            background: rgba(212, 175, 55, 0.08);
+            background: rgba(212, 175, 55, 0.12);
             border-left: 3px solid var(--accent-gold);
             padding: 12px 14px;
             border-radius: 0 8px 8px 0;
@@ -155,7 +160,7 @@
             border-bottom: none;
         }
 
-        /* Pulsante Principale Vinted (Super d'impatto) */
+        /* Pulsante Principale Vinted */
         .cta-button {
             display: flex;
             align-items: center;
@@ -326,7 +331,7 @@
 
         footer {
             text-align: center;
-            color: #4b5563;
+            color: #9ca3af;
             font-size: 0.78rem;
             padding: 20px 0;
             letter-spacing: 1px;
@@ -342,7 +347,7 @@
         <div class="brand-subtitle">Vetrina Abbigliamento Uomo</div>
     </header>
 
-    <!-- 1. Pulsante Principale Vinted (Focalizzato sui pezzi unici) -->
+    <!-- 1. Pulsante Principale Vinted -->
     <a href="https://www.vinted.it/member/3198152889" target="_blank" class="cta-button">
         <span>🛍️ ACQUISTA ORA SU VINTED</span>
         <span>➔</span>
