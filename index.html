@@ -31,17 +31,18 @@
         }
 
         body {
+            /* Sfondo a tutto schermo senza spazi neri vuoti */
             background-color: #0b0d12;
-            background-image: linear-gradient(rgba(11, 13, 18, 0.3), rgba(11, 13, 18, 0.6)), url('sfondo.webp');
-            background-size: 1550px auto;
-            background-position: center 30%;
+            background-image: linear-gradient(rgba(11, 13, 18, 0.35), rgba(11, 13, 18, 0.65)), url('sfondo.webp');
+            background-size: cover;
+            background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: var(--text-main);
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 40px 16px;
+            padding: 30px 16px;
             min-height: 100vh;
         }
 
@@ -55,42 +56,22 @@
 
         header {
             text-align: center;
-            padding: 15px 10px 5px;
+            padding: 0 10px;
         }
 
         .badge-top {
             display: inline-block;
-            background: rgba(11, 13, 18, 0.75);
+            background: rgba(11, 13, 18, 0.85);
             border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
             font-size: 0.72rem;
             letter-spacing: 3px;
             text-transform: uppercase;
-            padding: 6px 16px;
+            padding: 6px 18px;
             border-radius: 20px;
-            margin-bottom: 12px;
             font-weight: 600;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-        }
-
-        .brand-title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.3rem;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: #ffffff;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(212, 175, 55, 0.4);
-        }
-
-        .brand-subtitle {
-            color: var(--accent-gold);
-            font-size: 0.82rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-top: 8px;
-            font-weight: 600;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            margin-bottom: 5px;
         }
 
         .card {
@@ -345,9 +326,8 @@
 
 <div class="container">
     <header>
+        <!-- Badge Official Showcase posizionato in alto, sopra il sacchetto dello sfondo -->
         <div class="badge-top">✦ Official Showcase ✦</div>
-        <h1 class="brand-title">LO VESTO BENE</h1>
-        <div class="brand-subtitle">Vetrina Abbigliamento Uomo</div>
     </header>
 
     <!-- 1. Pulsante Principale Vinted -->
