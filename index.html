@@ -10,17 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --card-bg: rgba(13, 15, 20, 0.90);
+            /* Sfondi delle card leggermente più scuri e solidi per isolare i testi e renderli leggibilissimi */
+            --card-bg: rgba(11, 13, 18, 0.94);
             --accent-gold: #d4af37;
-            --gold-glow: rgba(212, 175, 55, 0.25);
+            --gold-glow: rgba(212, 175, 55, 0.3);
             --text-main: #f9fafb;
-            --text-muted: #d1d5db;
+            --text-muted: #e5e7eb;
             --vinted-teal: #007785;
             --vinted-bright: #00a3b5;
             --ig-gradient: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
             --fb-blue: #1877f2;
             --fb-bright: #2d88ff;
-            --border-color: rgba(212, 175, 55, 0.3);
+            --border-color: rgba(212, 175, 55, 0.35);
         }
 
         * {
@@ -31,9 +32,9 @@
         }
 
         body {
-            /* Sfondo centrato perfettamente e bloccato, senza tagli strani */
-            background-color: #07080a;
-            background-image: linear-gradient(rgba(7, 8, 10, 0.75), rgba(7, 8, 10, 0.88)), url('sfondo.webp');
+            /* Sfondo luminoso, pulito, con patina molto leggera per far risplendere l'immagine */
+            background-color: #0b0d12;
+            background-image: linear-gradient(rgba(11, 13, 18, 0.35), rgba(11, 13, 18, 0.65)), url('sfondo.webp');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -60,7 +61,7 @@
 
         .badge-top {
             display: inline-block;
-            background: linear-gradient(90deg, rgba(212,175,55,0.15), rgba(212,175,55,0.3), rgba(212,175,55,0.15));
+            background: rgba(11, 13, 18, 0.75);
             border: 1px solid var(--accent-gold);
             color: var(--accent-gold);
             font-size: 0.72rem;
@@ -70,7 +71,7 @@
             border-radius: 20px;
             margin-bottom: 12px;
             font-weight: 600;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
         }
 
         .brand-title {
@@ -80,7 +81,7 @@
             text-transform: uppercase;
             font-weight: 700;
             color: #ffffff;
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9), 0 0 25px rgba(212, 175, 55, 0.4);
         }
 
         .brand-subtitle {
@@ -90,6 +91,7 @@
             text-transform: uppercase;
             margin-top: 8px;
             font-weight: 600;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
         }
 
         .card {
@@ -98,7 +100,7 @@
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 24px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.85);
         }
 
         h2 {
@@ -128,7 +130,7 @@
         }
 
         .urgency-box {
-            background: rgba(212, 175, 55, 0.12);
+            background: rgba(212, 175, 55, 0.15);
             border-left: 3px solid var(--accent-gold);
             padding: 12px 14px;
             border-radius: 0 8px 8px 0;
@@ -178,12 +180,12 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 25px rgba(0, 119, 133, 0.5);
+            box-shadow: 0 8px 25px rgba(0, 119, 133, 0.6);
         }
 
         .cta-button:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 35px rgba(0, 163, 181, 0.7);
+            box-shadow: 0 12px 35px rgba(0, 163, 181, 0.8);
             background: linear-gradient(135deg, #008a9b, #00b9ce);
         }
 
@@ -204,12 +206,12 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 6px 20px rgba(131, 58, 180, 0.4);
+            box-shadow: 0 6px 20px rgba(131, 58, 180, 0.5);
         }
 
         .ig-button:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(253, 29, 29, 0.6);
+            box-shadow: 0 10px 30px rgba(253, 29, 29, 0.7);
         }
 
         /* Pulsante Facebook */
@@ -229,12 +231,12 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.5);
         }
 
         .fb-button:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(45, 136, 255, 0.6);
+            box-shadow: 0 10px 30px rgba(45, 136, 255, 0.7);
         }
 
         /* Tabella Fit Advisor */
@@ -311,11 +313,11 @@
             justify-content: space-between;
             align-items: center;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
 
         .accordion-btn:hover {
-            background: rgba(212, 175, 55, 0.15);
+            background: rgba(212, 175, 55, 0.2);
             box-shadow: 0 0 20px var(--gold-glow);
         }
 
@@ -332,10 +334,11 @@
 
         footer {
             text-align: center;
-            color: #9ca3af;
+            color: #d1d5db;
             font-size: 0.78rem;
             padding: 20px 0;
             letter-spacing: 1px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
         }
     </style>
 </head>
