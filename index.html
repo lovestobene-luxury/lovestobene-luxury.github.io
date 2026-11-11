@@ -31,17 +31,17 @@
         }
 
         body {
-            /* Immagine luminosa, intera e non tagliata (contain) */
             background-color: #0b0d12;
-            background-image: linear-gradient(rgba(11, 13, 18, 0.3), rgba(11, 13, 18, 0.6)), url('sfondo.webp');
-            background-size: contain;
-            background-position: center top;
-            background-repeat: repeat-y;
-            background-attachment: scroll;
+            background-image: linear-gradient(rgba(11, 13, 18, 0.4), rgba(11, 13, 18, 0.7)), url('sfondo.webp');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: var(--text-main);
             display: flex;
             justify-content: center;
-            padding: 30px 16px;
+            align-items: center;
+            padding: 40px 16px;
             min-height: 100vh;
         }
 
