@@ -3,469 +3,777 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lo Vesto Bene Luxury | Vetrina Ufficiale</title>
-    <!-- Font di lusso da Google Fonts -->
+    <title>Lo Veste Bene Luxury — Sartorial & Technical Menswear</title>
+    <meta name="description" content="Selezione esclusiva di abbigliamento uomo di alta gamma, rigorosamente nuovo con cartellino. Autenticità garantita e misurazione sartoriale.">
+    
+    <!-- Google Fonts: Tipografia Editoriale di Lusso -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --card-bg: rgba(11, 13, 18, 0.92);
-            --accent-gold: #d4af37;
-            --gold-glow: rgba(212, 175, 55, 0.3);
-            --text-main: #f9fafb;
-            --text-muted: #e5e7eb;
-            --vinted-teal: #007785;
-            --vinted-bright: #00a3b5;
-            --ig-gradient: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-            --fb-blue: #1877f2;
-            --fb-bright: #2d88ff;
-            --border-color: rgba(212, 175, 55, 0.35);
+            --bg-primary: #09090B;
+            --bg-secondary: #111114;
+            --bg-card: #16161A;
+            --gold: #C6A355;
+            --gold-light: #DFC27D;
+            --gold-dim: rgba(198, 163, 85, 0.18);
+            --text-primary: #F5F5F7;
+            --text-secondary: #A1A1AA;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-gold: rgba(198, 163, 85, 0.35);
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+            --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: #0b0d12;
-            background-image: linear-gradient(rgba(11, 13, 18, 0.3), rgba(11, 13, 18, 0.5)), url('sfondo.webp');
-            background-size: contain;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: var(--text-main);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px 16px;
-            min-height: 100vh;
-            width: 100vw;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 600px;
+        /* Sfondo con leggera texture radiale */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            z-index: 2;
+            height: 100%;
+            background: radial-gradient(circle at 50% 0%, rgba(198, 163, 85, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: -1;
         }
 
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- HEADER / HERO --- */
         header {
             text-align: center;
-            padding: 0 10px;
+            padding: 64px 0 44px;
+            border-bottom: 1px solid var(--border-subtle);
         }
 
-        .badge-top {
+        .eyebrow {
             display: inline-block;
-            background: rgba(11, 13, 18, 0.85);
-            border: 1px solid var(--accent-gold);
-            color: var(--accent-gold);
-            font-size: 0.72rem;
-            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.28em;
             text-transform: uppercase;
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-weight: 600;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-            margin-bottom: 5px;
+            color: var(--gold);
+            margin-bottom: 16px;
         }
 
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.85);
+        .monogram {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 20px;
+            border: 1px solid var(--border-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-size: 22px;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            background: rgba(198, 163, 85, 0.04);
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: clamp(2.4rem, 6vw, 3.6rem);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            line-height: 1.1;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--text-secondary);
+            max-width: 520px;
+            margin: 0 auto 32px;
+            letter-spacing: 0.02em;
+        }
+
+        /* --- PRIMARY & SOCIAL LINKS --- */
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+
+        .btn-primary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 26px;
+            background: linear-gradient(135deg, var(--gold) 0%, #B38E3E 100%);
+            color: #09090B;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            transition: var(--transition);
+            border: 1px solid var(--gold-light);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(198, 163, 85, 0.25);
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+        }
+
+        .social-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .btn-secondary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 16px;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--border-gold);
+            background-color: var(--bg-card);
+            color: var(--gold-light);
+        }
+
+        .btn-secondary svg, .btn-primary svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        /* --- SECTIONS COMMON --- */
+        section {
+            padding: 52px 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+
+        .section-tag {
+            font-size: 10px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 8px;
         }
 
         h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.05rem;
-            color: var(--accent-gold);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 14px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            color: var(--text-primary);
         }
 
-        h3 {
-            font-size: 0.88rem;
-            color: var(--text-main);
-            margin: 18px 0 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-align: left;
+        /* --- PILLARS / PROTOCOLLO GARANZIA --- */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
         }
 
-        p {
-            color: var(--text-muted);
-            line-height: 1.65;
-            font-size: 0.92rem;
+        .pillar-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-subtle);
+            padding: 26px 20px;
+            text-align: center;
+            transition: var(--transition);
         }
 
-        .urgency-box {
-            background: rgba(212, 175, 55, 0.15);
-            border-left: 3px solid var(--accent-gold);
-            padding: 12px 14px;
-            border-radius: 0 8px 8px 0;
-            margin: 14px 0;
-            font-size: 0.86rem;
-            color: var(--text-main);
-            line-height: 1.5;
+        .pillar-card:hover {
+            border-color: var(--border-gold);
+            transform: translateY(-2px);
         }
 
-        .urgency-box strong {
-            color: var(--accent-gold);
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-top: 14px;
-        }
-
-        .feature-list li {
-            padding: 10px 0;
-            color: var(--text-main);
-            font-size: 0.86rem;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-bottom: 1px dashed var(--border-color);
-        }
-
-        .feature-list li:last-child {
-            border-bottom: none;
-        }
-
-        /* Pulsante Principale Vinted */
-        .cta-button {
+        .pillar-icon {
+            width: 36px;
+            height: 36px;
+            margin: 0 auto 14px;
+            color: var(--gold);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
-            background: linear-gradient(135deg, var(--vinted-teal), var(--vinted-bright));
-            color: #ffffff;
-            text-decoration: none;
-            text-align: center;
-            padding: 20px 24px;
-            border-radius: 14px;
-            font-weight: 700;
-            font-size: 1rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 25px rgba(0, 119, 133, 0.6);
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 35px rgba(0, 163, 181, 0.8);
-            background: linear-gradient(135deg, #008a9b, #00b9ce);
-        }
-
-        /* Pulsante Instagram */
-        .ig-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: var(--ig-gradient);
-            color: #ffffff;
-            text-decoration: none;
-            text-align: center;
-            padding: 15px 24px;
-            border-radius: 14px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 6px 20px rgba(131, 58, 180, 0.5);
-        }
-
-        .ig-button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(253, 29, 29, 0.7);
-        }
-
-        /* Pulsante Facebook */
-        .fb-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: linear-gradient(135deg, var(--fb-blue), var(--fb-bright));
-            color: #ffffff;
-            text-decoration: none;
-            text-align: center;
-            padding: 15px 24px;
-            border-radius: 14px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 6px 20px rgba(24, 119, 242, 0.5);
-        }
-
-        .fb-button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 30px rgba(45, 136, 255, 0.7);
-        }
-
-        /* Tabella Fit Advisor */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-            margin-bottom: 14px;
-            text-align: left;
-        }
-
-        th, td {
-            padding: 10px 12px;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.82rem;
-        }
-
-        th {
-            color: var(--accent-gold);
+        .pillar-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
         }
 
-        td {
-            color: var(--text-muted);
+        .pillar-card p {
+            font-size: 12.5px;
+            font-weight: 300;
+            color: var(--text-secondary);
+            line-height: 1.55;
         }
 
-        .measure-instructions {
-            margin-top: 18px;
-            padding-top: 14px;
-            border-top: 1px solid var(--border-color);
-            text-align: left;
+        .scarcity-banner {
+            margin-top: 24px;
+            padding: 14px 20px;
+            background: rgba(198, 163, 85, 0.06);
+            border-left: 2px solid var(--gold);
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .measure-instructions p {
-            font-size: 0.86rem;
-            margin-bottom: 10px;
-            text-align: left;
+        .scarcity-banner strong {
+            color: var(--gold-light);
+            font-weight: 500;
         }
 
-        .measure-list {
-            list-style: none;
+        /* --- LOOKBOOK / VETRINA CAPI --- */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .product-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-subtle);
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            text-align: left;
+            justify-content: space-between;
+            transition: var(--transition);
         }
 
-        .measure-list li {
-            font-size: 0.84rem;
-            color: var(--text-muted);
-            line-height: 1.5;
+        .product-card:hover {
+            border-color: var(--border-gold);
         }
 
-        .measure-list li strong {
-            color: var(--accent-gold);
-        }
-
-        /* Pulsante interattivo Accordion per Guida Taglie */
-        .accordion-btn {
-            width: 100%;
-            background: linear-gradient(145deg, #181d28, #12151f);
-            color: var(--accent-gold);
-            border: 1px solid var(--accent-gold);
-            padding: 16px 20px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: pointer;
+        .product-badge {
+            padding: 10px 14px;
+            border-bottom: 1px solid var(--border-subtle);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
         }
 
-        .accordion-btn:hover {
-            background: rgba(212, 175, 55, 0.2);
-            box-shadow: 0 0 20px var(--gold-glow);
+        .product-body {
+            padding: 20px 16px;
+        }
+
+        .product-brand {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .product-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .product-specs {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .product-footer {
+            padding: 14px 16px;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .product-price {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--gold-light);
+        }
+
+        .product-price span {
+            font-family: var(--font-sans);
+            font-size: 10px;
+            text-decoration: line-through;
+            color: var(--text-secondary);
+            margin-left: 4px;
+        }
+
+        .product-link {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 6px 10px;
+            border: 1px solid var(--border-gold);
+            transition: var(--transition);
+        }
+
+        .product-link:hover {
+            background-color: var(--gold);
+            color: #09090B;
+        }
+
+        /* --- ACCORDION GUIDA TAGLIE --- */
+        .accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        details {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-subtle);
+            transition: var(--transition);
+        }
+
+        details[open] {
+            border-color: var(--border-gold);
+        }
+
+        summary {
+            padding: 18px 22px;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-primary);
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            color: var(--gold);
+            transition: transform 0.25s ease;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
         }
 
         .accordion-content {
-            display: none;
-            margin-top: 18px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
+            padding: 0 22px 22px;
+            border-top: 1px solid var(--border-subtle);
+            overflow-x: auto;
         }
 
-        .accordion-content.active {
-            display: block;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 12.5px;
+            text-align: left;
         }
 
+        th {
+            padding: 10px 12px;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        td {
+            padding: 10px 12px;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        td:first-child {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .measure-guide {
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .measure-guide p {
+            margin-bottom: 12px;
+        }
+
+        .measure-guide ul {
+            list-style: none;
+            display: grid;
+            gap: 8px;
+        }
+
+        .measure-guide li strong {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+
+        /* --- FOOTER --- */
         footer {
             text-align: center;
-            color: #d1d5db;
-            font-size: 0.78rem;
-            padding: 20px 0;
-            letter-spacing: 1px;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+            padding: 40px 0 48px;
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+
+        footer span {
+            color: var(--gold);
+        }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 680px) {
+            .pillars-grid, .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+            .social-row {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 48px 0 36px;
+            }
+            section {
+                padding: 40px 0;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <div class="badge-top">✦ Official Showcase ✦</div>
-    </header>
+    <div class="container">
+        <!-- HEADER / HERO -->
+        <header>
+            <div class="monogram">LVB</div>
+            <span class="eyebrow">Official Atelier Showcase</span>
+            <h1>Lo Veste Bene Luxury</h1>
+            <p class="subtitle">
+                Selezione curata di abbigliamento uomo di alta gamma. Capi rigorosamente nuovi con cartellino originale, verificati singolarmente al millimetro.
+            </p>
 
-    <!-- 1. Pulsante Principale Vinted -->
-    <a href="https://www.vinted.it/member/3198152889" target="_blank" class="cta-button">
-        <span>🛍️ ACQUISTA ORA SU VINTED</span>
-        <span>➔</span>
-    </a>
+            <div class="cta-group">
+                <a href="https://www.vinted.it/member/3198152889" target="_blank" rel="noopener" class="btn-primary">
+                    <span>Esplora la Vetrina su Vinted</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M13 5l7 7-7 7"/>
+                    </svg>
+                </a>
 
-    <!-- 2. Pulsanti Social (Instagram & Facebook) -->
-    <a href="https://www.instagram.com/lovestobene" target="_blank" class="ig-button">
-        <span>📸 SEGUI @LOVESTOBENE SU INSTAGRAM</span>
-        <span>➔</span>
-    </a>
+                <div class="social-row">
+                    <a href="https://www.instagram.com/lovestobene" target="_blank" rel="noopener" class="btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                        <span>Instagram</span>
+                    </a>
 
-    <a href="https://www.facebook.com/LOVESTOBENE" target="_blank" class="fb-button">
-        <span>📘 SEGUI LA PAGINA FACEBOOK</span>
-        <span>➔</span>
-    </a>
-
-    <!-- 3. Presentazione Capi & Urgenza -->
-    <div class="card">
-        <h2>Selezione Esclusiva</h2>
-        <p>Capi di abbigliamento uomo di alta gamma, rigorosamente nuovi e mai indossati con cartellino originale.</p>
-        
-        <div class="urgency-box">
-            ⚡ <strong>Disponibilità Limitata:</strong> Trattandosi di pezzi unici, gli articoli migliori vengono venduti rapidamente. Controlla subito la vetrina attiva.
-        </div>
-
-        <ul class="feature-list">
-            <li>✨ <strong>100% Originali & Nuovi</strong> con cartellino</li>
-            <li>📦 <strong>Spedizione rapida</strong> e imballo protettivo dedicato</li>
-            <li>🛡️ <strong>Garanzia Venditore Pro:</strong> massima tutela negli acquisti e diritto di recesso garantito su Vinted</li>
-        </ul>
-    </div>
-
-    <!-- 4. Fit Advisor con Pulsante Interattivo -->
-    <div class="card" style="padding: 20px;">
-        <button class="accordion-btn" onclick="toggleFitAdvisor()">
-            <span>📐 Fit Advisor — Guida alle Misure</span>
-            <span id="arrow-icon">▼</span>
-        </button>
-
-        <div id="fit-content" class="accordion-content">
-            <!-- TOP -->
-            <h3>Top (Camicie, Polo & Maglieria)</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Taglia</th>
-                        <th>Petto (cm)</th>
-                        <th>Vita (cm)</th>
-                        <th>Fianchi (cm)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>XS</td><td>90.0 - 94.0</td><td>73.5 - 77.5</td><td>85.5 - 90.5</td></tr>
-                    <tr><td>S</td><td>94.0 - 98.0</td><td>77.5 - 81.5</td><td>90.5 - 95.5</td></tr>
-                    <tr><td>M</td><td>98.0 - 102.0</td><td>81.5 - 85.5</td><td>95.5 - 100.5</td></tr>
-                    <tr><td>L</td><td>102.0 - 106.0</td><td>85.5 - 89.5</td><td>100.5 - 105.5</td></tr>
-                    <tr><td>XL</td><td>106.0 - 110.0</td><td>89.5 - 93.5</td><td>105.5 - 110.5</td></tr>
-                    <tr><td>XXL</td><td>110.0 - 114.0</td><td>93.5 - 97.5</td><td>110.5 - 115.5</td></tr>
-                </tbody>
-            </table>
-
-            <!-- BOTTOM -->
-            <h3>Bottom (Denim & Pantaloni)</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Taglia (W)</th>
-                        <th>Vita (cm)</th>
-                        <th>Fianchi (cm)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>27</td><td>73.6 - 76.2</td><td>89.1 - 91.6</td></tr>
-                    <tr><td>28</td><td>76.2 - 78.7</td><td>91.6 - 94.2</td></tr>
-                    <tr><td>29</td><td>78.7 - 81.3</td><td>94.2 - 96.7</td></tr>
-                    <tr><td>30</td><td>81.3 - 83.8</td><td>96.7 - 99.2</td></tr>
-                    <tr><td>31</td><td>83.8 - 86.3</td><td>99.2 - 101.7</td></tr>
-                    <tr><td>32</td><td>86.3 - 88.9</td><td>101.7 - 104.3</td></tr>
-                    <tr><td>33</td><td>88.9 - 91.4</td><td>104.3 - 106.8</td></tr>
-                    <tr><td>34</td><td>91.4 - 94.0</td><td>106.8 - 109.4</td></tr>
-                    <tr><td>35</td><td>94.0 - 96.5</td><td>109.4 - 111.9</td></tr>
-                    <tr><td>36</td><td>96.5 - 99.1</td><td>111.9 - 114.5</td></tr>
-                    <tr><td>37</td><td>99.1 - 101.6</td><td>114.5 - 117.0</td></tr>
-                    <tr><td>38</td><td>101.6 - 104.2</td><td>117.0 - 119.6</td></tr>
-                    <tr><td>39</td><td>104.2 - 106.7</td><td>119.6 - 122.1</td></tr>
-                    <tr><td>40</td><td>106.7 - 109.3</td><td>122.1 - 124.6</td></tr>
-                </tbody>
-            </table>
-
-            <h3>Lunghezza Interno Gamba (L)</h3>
-            <table>
-                <thead>
-                    <tr><th>Taglia (L)</th><th>Interno Gamba (cm)</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>28</td><td>80.0 cm</td></tr>
-                    <tr><td>30</td><td>85.0 cm</td></tr>
-                    <tr><td>32</td><td>90.0 cm</td></tr>
-                    <tr><td>34</td><td>95.0 cm</td></tr>
-                    <tr><td>36</td><td>100.0 cm</td></tr>
-                </tbody>
-            </table>
-
-            <!-- HOW TO MEASURE -->
-            <div class="measure-instructions">
-                <h3>Come prendere le misure</h3>
-                <p>Per una misurazione accurata: posizionati in piedi, mantieni una respirazione normale e usa un metro da sarta flessibile. Lascia sempre uno spazio di due dita tra il metro e il corpo.</p>
-                <ul class="measure-list">
-                    <li><strong>1 - Petto:</strong> Misura attorno alla parte più ampia del torace.</li>
-                    <li><strong>2 - Vita:</strong> Misura attorno alla linea naturale della vita (il punto più stretto del busto).</li>
-                    <li><strong>3 - Fianchi:</strong> Misura attorno alla parte più ampia dei fianchi.</li>
-                    <li><strong>4 - Interno gamba:</strong> Posizionati a piedi scalzi su una superficie piana e misura dall'attaccatura del cavallo fino a terra.</li>
-                </ul>
+                    <a href="https://www.facebook.com/LOVESTOBENE" target="_blank" rel="noopener" class="btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                        <span>Facebook</span>
+                    </a>
+                </div>
             </div>
-        </div>
+        </header>
+
+        <!-- PROTOCOLLO GARANZIA -->
+        <section>
+            <div class="section-header">
+                <span class="section-tag">Standard Qualitativo</span>
+                <h2>Il Protocollo Lo Veste Bene</h2>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3>100% Autentici & Nuovi</h3>
+                    <p>Solo capi originali di fascia premium, mai indossati e completi di etichette e cartellini ufficiali.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 6H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1z"/>
+                            <path d="M6 6v4M10 6v2M14 6v4M18 6v2"/>
+                        </svg>
+                    </div>
+                    <h3>Misure Sartoriali</h3>
+                    <p>Ogni articolo viene misurato manualmente in piano al millimetro per garantirti una vestibilità impeccabile.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>Spedizione Protetta</h3>
+                    <p>Imballaggio curato, video-verifica pre-spedizione, sigillo antimanomissione e tutela integrale Vinted Pro.</p>
+                </div>
+            </div>
+
+            <div class="scarcity-banner">
+                <span>✦</span>
+                <div>
+                    <strong>Disponibilità Limitata:</strong> Trattandosi di pezzi unici selezionati, gli articoli in vetrina vengono venduti rapidamente. Verifica la disponibilità aggiornata sul profilo Vinted.
+                </div>
+            </div>
+        </section>
+
+        <!-- SELEZIONE IN VETRINA -->
+        <section>
+            <div class="section-header">
+                <span class="section-tag">Curated Archive</span>
+                <h2>Pezzi Selezionati</h2>
+            </div>
+
+            <div class="showcase-grid">
+                <!-- Articolo 1 -->
+                <article class="product-card">
+                    <div>
+                        <div class="product-badge">
+                            <span>Outerwear</span>
+                            <span>Tg. S / L</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-brand">Denham The Jeanmaker</div>
+                            <h3 class="product-title">Free Move Technical Parka</h3>
+                            <p class="product-specs">Tessuto stretch idrorepellente e antivento con imbottitura Eco Fill. Fodera monogrammata.</p>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">€ 89 <span>€ 279</span></div>
+                        <a href="https://www.vinted.it/member/3198152889" target="_blank" rel="noopener" class="product-link">Vedi su Vinted</a>
+                    </div>
+                </article>
+
+                <!-- Articolo 2 -->
+                <article class="product-card">
+                    <div>
+                        <div class="product-badge">
+                            <span>Trousers</span>
+                            <span>W32 / L32</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-brand">Denham The Jeanmaker</div>
+                            <h3 class="product-title">Cargo Pant GDG Black</h3>
+                            <p class="product-specs">Taglio contemporaneo sartoriale, nuovo con cartellino originale. Misure in piano certificate.</p>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">€ 65 <span>€ 179</span></div>
+                        <a href="https://www.vinted.it/member/3198152889" target="_blank" rel="noopener" class="product-link">Vedi su Vinted</a>
+                    </div>
+                </article>
+
+                <!-- Articolo 3 -->
+                <article class="product-card">
+                    <div>
+                        <div class="product-badge">
+                            <span>Knitwear</span>
+                            <span>Tg. M</span>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-brand">Denham The Jeanmaker</div>
+                            <h3 class="product-title">Half-Zip Cotton Sweatshirt</h3>
+                            <p class="product-specs">Cotone premium 100% ad alta densità, collo alto con zip a contrasto e logo ricamato.</p>
+                        </div>
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">€ 49 <span>€ 139</span></div>
+                        <a href="https://www.vinted.it/member/3198152889" target="_blank" rel="noopener" class="product-link">Vedi su Vinted</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- GUIDA ALLE TAGLIE A SCOMPARSA -->
+        <section>
+            <div class="section-header">
+                <span class="section-tag">Size & Fit Reference</span>
+                <h2>Guida alle Taglie</h2>
+            </div>
+
+            <div class="accordion">
+                <!-- Top -->
+                <details>
+                    <summary>Top — Camicie, Polo & Maglieria</summary>
+                    <div class="accordion-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Taglia</th>
+                                    <th>Petto (cm)</th>
+                                    <th>Vita (cm)</th>
+                                    <th>Fianchi (cm)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>XS</td><td>90.0 - 94.0</td><td>73.5 - 77.5</td><td>85.5 - 90.5</td></tr>
+                                <tr><td>S</td><td>94.0 - 98.0</td><td>77.5 - 81.5</td><td>90.5 - 95.5</td></tr>
+                                <tr><td>M</td><td>98.0 - 102.0</td><td>81.5 - 85.5</td><td>95.5 - 100.5</td></tr>
+                                <tr><td>L</td><td>102.0 - 106.0</td><td>85.5 - 89.5</td><td>100.5 - 105.5</td></tr>
+                                <tr><td>XL</td><td>106.0 - 110.0</td><td>89.5 - 93.5</td><td>105.5 - 110.5</td></tr>
+                                <tr><td>XXL</td><td>110.0 - 114.0</td><td>93.5 - 97.5</td><td>110.5 - 115.5</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <!-- Bottom -->
+                <details>
+                    <summary>Bottom — Denim & Pantaloni (W)</summary>
+                    <div class="accordion-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Taglia (W)</th>
+                                    <th>Vita (cm)</th>
+                                    <th>Fianchi (cm)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>27</td><td>73.6 - 76.2</td><td>89.1 - 91.6</td></tr>
+                                <tr><td>28</td><td>76.2 - 78.7</td><td>91.6 - 94.2</td></tr>
+                                <tr><td>29</td><td>78.7 - 81.3</td><td>94.2 - 96.7</td></tr>
+                                <tr><td>30</td><td>81.3 - 83.8</td><td>96.7 - 99.2</td></tr>
+                                <tr><td>31</td><td>83.8 - 86.3</td><td>99.2 - 101.7</td></tr>
+                                <tr><td>32</td><td>86.3 - 88.9</td><td>101.7 - 104.3</td></tr>
+                                <tr><td>33</td><td>88.9 - 91.4</td><td>104.3 - 106.8</td></tr>
+                                <tr><td>34</td><td>91.4 - 94.0</td><td>106.8 - 109.4</td></tr>
+                                <tr><td>35</td><td>94.0 - 96.5</td><td>109.4 - 111.9</td></tr>
+                                <tr><td>36</td><td>96.5 - 99.1</td><td>111.9 - 114.5</td></tr>
+                                <tr><td>37</td><td>99.1 - 101.6</td><td>114.5 - 117.0</td></tr>
+                                <tr><td>38</td><td>101.6 - 104.2</td><td>117.0 - 119.6</td></tr>
+                                <tr><td>39</td><td>104.2 - 106.7</td><td>119.6 - 122.1</td></tr>
+                                <tr><td>40</td><td>106.7 - 109.3</td><td>122.1 - 124.6</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <!-- Lunghezza -->
+                <details>
+                    <summary>Lunghezza Interno Gamba (L)</summary>
+                    <div class="accordion-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Taglia (L)</th>
+                                    <th>Interno Gamba (cm)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>28</td><td>80.0 cm</td></tr>
+                                <tr><td>30</td><td>85.0 cm</td></tr>
+                                <tr><td>32</td><td>90.0 cm</td></tr>
+                                <tr><td>34</td><td>95.0 cm</td></tr>
+                                <tr><td>36</td><td>100.0 cm</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <!-- Come misurarsi -->
+                <details>
+                    <summary>Come prendere le misure correttamente</summary>
+                    <div class="accordion-content">
+                        <div class="measure-guide">
+                            <p>Posizionati in piedi, mantieni una respirazione normale e utilizza un metro da sarta flessibile lasciando sempre uno spazio di due dita tra il metro e il corpo:</p>
+                            <ul>
+                                <li><strong>1. Petto:</strong> Misura attorno alla parte più ampia del torace, passando sotto le ascelle.</li>
+                                <li><strong>2. Vita:</strong> Misura attorno alla linea naturale della vita (il punto più stretto del busto).</li>
+                                <li><strong>3. Fianchi:</strong> Misura attorno alla parte più ampia dei fianchi mantenendo i piedi uniti.</li>
+                                <li><strong>4. Interno gamba:</strong> A piedi scalzi su superficie piana, misura dall'attaccatura del cavallo fino a terra.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            © 2026 <span>Lo Veste Bene Luxury</span> — All Rights Reserved.
+        </footer>
     </div>
-
-    <footer>
-        © Lo Vesto Bene Luxury — All rights reserved.
-    </footer>
-</div>
-
-<script>
-    function toggleFitAdvisor() {
-        const content = document.getElementById('fit-content');
-        const arrow = document.getElementById('arrow-icon');
-        content.classList.toggle('active');
-        if (content.classList.contains('active')) {
-            arrow.textContent = '▲';
-        } else {
-            arrow.textContent = '▼';
-        }
-    }
-</script>
 
 </body>
 </html>
