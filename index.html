@@ -6,6 +6,9 @@
     <title>Lo Vesto Bene — Sartorial & Technical Menswear</title>
     <meta name="description" content="Selezione esclusiva di abbigliamento uomo di alta gamma, rigorosamente nuovo con cartellino. Autenticità garantita e misurazione sartoriale.">
     
+    <!-- Favicon con il nuovo logo -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,11 +50,18 @@
             padding: 0 20px;
         }
 
-        /* HEADER */
+        /* HEADER CON SFONDO ATELIER */
         header {
+            position: relative;
             text-align: center;
-            padding: 64px 0 44px;
-            border-bottom: 1px solid var(--border-subtle);
+            padding: 72px 24px 52px;
+            margin-top: 20px;
+            border: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-gold);
+            background-image: linear-gradient(to bottom, rgba(9, 9, 11, 0.72), rgba(9, 9, 11, 0.94)), url('sfondo.webp');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
         }
 
         .eyebrow {
@@ -61,22 +71,25 @@
             letter-spacing: 0.28em;
             text-transform: uppercase;
             color: var(--gold);
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
-        .monogram {
-            width: 56px;
-            height: 56px;
-            margin: 0 auto 20px;
+        .brand-logo {
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
             border: 1px solid var(--border-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-serif);
-            font-size: 22px;
-            letter-spacing: 0.1em;
-            color: var(--gold);
-            background: rgba(198, 163, 85, 0.04);
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+            background-color: #09090B;
+        }
+
+        .brand-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         h1 {
@@ -87,14 +100,16 @@
             line-height: 1.1;
             color: var(--text-primary);
             margin-bottom: 14px;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
         }
 
         .subtitle {
             font-size: 14px;
             font-weight: 300;
-            color: var(--text-secondary);
+            color: #D4D4D8;
             max-width: 520px;
             margin: 0 auto 32px;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
         }
 
         /* BUTTONS */
@@ -123,7 +138,7 @@
         }
 
         .btn-primary:hover {
-            opacity: 0.9;
+            opacity: 0.92;
             transform: translateY(-2px);
         }
 
@@ -139,7 +154,8 @@
             justify-content: center;
             gap: 10px;
             padding: 14px 16px;
-            background-color: var(--bg-secondary);
+            background-color: rgba(17, 17, 20, 0.85);
+            backdrop-filter: blur(6px);
             border: 1px solid var(--border-subtle);
             color: var(--text-primary);
             text-decoration: none;
@@ -361,6 +377,10 @@
         }
 
         @media (max-width: 680px) {
+            header {
+                padding: 56px 16px 40px;
+                margin-top: 12px;
+            }
             .pillars-grid, .social-row {
                 grid-template-columns: 1fr;
             }
@@ -372,7 +392,9 @@
     <div class="container">
         <!-- HEADER -->
         <header>
-            <div class="monogram">LVB</div>
+            <div class="brand-logo">
+                <img src="logo.jpg" alt="Lo Vesto Bene Monogram">
+            </div>
             <span class="eyebrow">Official Showcase</span>
             <h1>Lo Vesto Bene</h1>
             <p class="subtitle">
